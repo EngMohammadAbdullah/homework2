@@ -1,0 +1,371 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+    <script type="text/javascript">
+        try {
+
+            //Hello World
+            $(document).ready(function () {
+
+                $("#print_hello_world").click(function () {
+                    var str = print_hello_world();
+                    console.log(str);
+                    alert(str);
+                })
+
+                $("#add_1_to").click(function () {
+                    var n = prompt("Add number to be added");
+                    n = Number.parseInt(n);
+                    var result = add_1_to(n)
+                    console.log(result);
+                    alert(result);
+                });
+
+                $("#add_1_to").click(function () {
+                    var n = prompt("Add number to be added");
+                    n = Number.parseInt(n);
+                    var result = add_1_to(n)
+                    console.log(result);
+                    alert(result);
+                });
+
+
+                $("#choose_operation").click(function () {
+                    var n = prompt("Add number to be added");
+                    n = Number.parseInt(n);
+                    var operation =
+                        prompt("Please Choose Operation");
+                    var result = choose_operation(n, operation)
+                    console.log(result);
+                    alert(result);
+                });
+
+
+                $("#get_max_number").click(function () {
+                    var list =
+                        prompt("Add numbers  to return max number ex: 4,5,9,8,7");
+                    list = JSON.parse("[" + list + "]");
+                    var result = get_max_number(list);
+                    console.log(result);
+                    alert(result);
+                });
+
+                $("#reverse_list").click(function () {
+                    var list =
+                        prompt("Add numbers  to reverse list:" +
+                            "ex : 4, 5, 9, 8, 7");
+                    list = JSON.parse("[" + list + "]");
+                    var result = get_max_number(list);
+                    console.log(result);
+                    alert(result);
+                });
+
+                $("#Is_Exist").click(function () {
+                    var list =
+                        prompt("Add numbers  to reverse list:" +
+                            "ex : 4, 5, 9, 8, 7");
+                    list = JSON.parse("[" + list + "]");
+
+                    var number = prompt("Please add number to search about");
+                    number = Number.parseInt(n);
+                    var result = Is_Exist(number, list);
+                    console.log(result);
+                    alert(result);
+                });
+
+
+                $("#get_odd_position_elements").click(function () {
+                    var list =
+                        prompt(
+                            "Add numbers  to get odd position  elements:" +
+                            "ex : 4, 5, 9, 8, 7");
+                    list = JSON.parse("[" + list + "]");
+                    var result = get_odd_position_elements(list);
+                    console.log(result);
+                    alert(result);
+                });
+
+
+                $("#list_concatenate").click(function () {
+                    var list1 =
+                        prompt("Add first list:" +
+                            "ex : 4, 5, 9, 8, 7");
+                    var list2 =
+                        prompt("Add first list:" +
+                            "ex : 4, 5, 9, 8, 7");
+
+                    list1 = JSON.parse("[" + list1 + "]");
+                    list2 = JSON.parse("[" + list2 + "]");
+
+                    var result = list_concatenate(list1, list2);
+
+                    console.log(result);
+                    alert(result);
+                });
+
+                $("#convert_number_to_list").click(function () {
+                    var number =
+                        prompt("Add number to convert it to a list" + "ex 4569 : [4,5,6,9]");
+
+
+                    var result = convert_number_to_list(number);
+
+                    console.log(result);
+                    alert(result);
+                });
+
+                /*
+            Write a function that takes a list of strings an prints them, one per line, in a rectangular frame.For example the list["Hello", "World", "in", "a", "frame"] gets printed as:
+
+            *********
+            * Hello *
+            * World *
+            * in    *
+            * a *
+            * frame *
+            *********
+            */
+
+                $("#string_decorate").click(function () {
+                    var list =
+                        prompt("Add List of words" +
+                            'ex 4569 : [4,5,6,9]["Hello", "World", "in", "a", "frame"]');
+
+                    list = JSON.parse("[" + list + "]");
+                    var result = string_decorate(number);
+                    console.log(result);
+                    alert(result);
+                });
+
+                $("#guess_number").click(function () {
+                    var number =
+                        prompt("Add number");
+
+                    number = Number.parseInt(number)
+                    var result = string_decorate(number);
+                    console.log(result);
+                    alert(result);
+                });
+
+                $("#difference").click(function () {
+                    var number =
+                        prompt("Add number");
+
+                    number = Number.parseInt(number)
+                    var result = difference(number);
+                    console.log(result);
+                    alert(result);
+                });
+
+                $("#add_char_to").click(function () {
+                    var giverStr =
+                        prompt("Add str");
+                    var result = add_char_to(giverStr);
+                    console.log(result);
+                    alert(result);
+                });
+
+                $("#add_last_three_char_to").click(function () {
+                    var giverStr =
+                        prompt("Add str");
+                    var result = add_last_three_char_to(giverStr);
+                    console.log(result);
+                    alert(result);
+                });
+
+                $("#check_number_in_range").click(function () {
+                    var number1 =
+                        prompt("Add number1");
+
+                    number1 = Number.parseInt(number1)
+
+                    var number2 =
+                        prompt("Add number2");
+
+                    number2 = Number.parseInt(number2)
+                    var number3 =
+                        prompt("Add number3");
+
+                    number3 = Number.parseInt(number3)
+
+                    var result = check_number_in_range(number1, number2, number3);
+                    console.log(result);
+                    alert(result);
+                });
+
+                $("#Is_last_digit_positive").click(function () {
+                    var number1 =
+                        prompt("Add number1");
+
+                    number1 = Number.parseInt(number1)
+
+                    var number2 =
+                        prompt("Add number2");
+
+                    number2 = Number.parseInt(number2)
+                    var number3 =
+                        prompt("Add number3");
+
+                    number3 = Number.parseInt(number3)
+
+                    var result = Is_last_digit_positive(number1, number2, number3);
+                    console.log(result);
+                    alert(result);
+                });
+            })
+
+        } catch (e) {
+            console.log(e.message)
+        }
+
+    </script>
+    <style>
+
+        * {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+
+
+    <br />
+
+    <button id="print_hello_world"
+            type="button" class="btn btn-primary">
+        print_hello_world
+    </button>
+
+    <br />
+    <br />
+
+    <button id="add_1_to"
+            type="button" class="btn btn-primary">
+        add_1_to
+    </button>
+    <br />
+    <br />
+
+    <button id="choose_operation"
+            type="button" class="btn btn-primary">
+        choose_operation
+    </button>
+
+    <br />
+    <br />
+
+    <button id="get_max_number"
+            type="button" class="btn btn-primary">
+        get_max_number
+    </button>
+
+    <br />
+    <br />
+
+    <button id="reverse_list"
+            type="button" class="btn btn-primary">
+        reverse_list
+    </button>
+
+    <br />
+    <br />
+
+    <button id="Is_Exist"
+            type="button" class="btn btn-primary">
+        Is_Exist
+    </button>
+
+    <br />
+    <br />
+
+    <button id="get_odd_position_elements"
+            type="button" class="btn btn-primary">
+        get_odd_position_elements
+    </button>
+
+
+    <br />
+    <br />
+    <button id="get_odd_numbers"
+            type="button" class="btn btn-primary">
+        get_odd_numbers
+    </button>
+
+    <br />
+    <br />
+    <button id="list_concatenate"
+            type="button" class="btn btn-primary">
+        list_concatenate
+    </button>
+
+    <br />
+    <br />
+
+    <button id="convert_number_to_list"
+            type="button" class="btn btn-primary">
+        convert_number_to_list
+    </button>
+    <br />
+    <br />
+
+    <button id="string_decorate"
+            type="button" class="btn btn-primary">
+        string_decorate
+    </button>
+
+    <br />
+    <br />
+
+    <button id="guess_number"
+            type="button" class="btn btn-primary">
+        guess_number
+    </button>
+    <br />
+    <br />
+
+    <button id="difference"
+            type="button" class="btn btn-primary">
+        difference
+    </button>
+    <br />
+    <br />
+
+    <button id="add_char_to"
+            type="button" class="btn btn-primary">
+        add_char_to
+    </button>
+
+    <br />
+    <br />
+
+    <button id="add_last_three_char_to"
+            type="button" class="btn btn-primary">
+        add_last_three_char_to
+    </button>
+
+    <br />
+    <br />
+
+    <button id="check_number_in_range"
+            type="button" class="btn btn-primary">
+        check_number_in_range
+    </button>
+    <br />
+    <br />
+
+    <button id="Is_last_digit_positive"
+            type="button" class="btn btn-primary">
+        Is_last_digit_positive
+    </button>
+</body>
+</html>
