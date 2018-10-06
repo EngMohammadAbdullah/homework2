@@ -12,15 +12,14 @@ homeWork.prototype.print_hello_world = function () {
     return str;
 }
 
-//Write a program that asks the user for a number n and prints the sum of the numbers 1 to n
+//DONE Write a program that asks the user for a number n and prints the sum of the numbers 1 to n
 
 homeWork.prototype.add_1_to = function (n) {
-    //code here
-
-    throw new Error("Not Implemneted");
+    
+    var N = (n+1)
+    return N;
+    
 }
-
-
 
 //Write a program that asks the user for a number n and gives them the possibility to choose between computing the sum(+) or  computing the multipe (*)  of 1, â€¦, n.
 
@@ -31,43 +30,30 @@ homeWork.prototype.choose_operation = function (n, operation) {
 
 }
 
-//Write a function that returns the largest element in a list
+//DONE  Write a function that returns the largest element in a list
 homeWork.prototype.get_max_number = function (list) {
-    /* 
-      var list = [1,5,8,1,19,3,8]
-     max here 19
-     */
-    //code here
-    return list[2];
-    throw new Error("Not Implemneted");
+   
+    return Math.max.apply(null, list);
 }
 
-//Write function that reverses a list, preferably in place.
+
+//DONE Write function that reverses a list, preferably in place.
 
 homeWork.prototype.reverse_list = function (list) {
-    /*
-     list = ['a',4,8,'r']
-     after reverse_list(list)
-     ['r',8,4,'a']
-     */
-
-    throw new Error("Not Implemneted");
+    return list.reverse();
 }
+
+
 
 //Write a function that checks whether an element exist in a list.
 
 homeWork.prototype.Is_Exist = function (element, list) {
-    /*
-     element ex:5
-     list = [1,5,8,6,9,7]
-     return true ; 
-     element ex:11
-     list = [1,5,8,6,9,7]
-      return false ;
-     */
-
-    throw new Error("Not Implemneted");
-
+    
+    var n = list.includes(element);
+    if (n) {
+       return element+" exist in the list ["+list+"]";
+    } else
+     return element+" doesn't exist in the list ["+list+"]";
 }
 
 //Write a function that returns the elements on odd positions in a list.
@@ -96,22 +82,23 @@ homeWork.prototype.get_odd_numbers = function (list) {
 }
 
 
-//Write a function that concatenates two lists. [a,b,c], [1,2,3]  To [a,b,c,1,2,3]
+//DONE Write a function that concatenates two lists. [a,b,c], [1,2,3]  To [a,b,c,1,2,3]
 
 homeWork.prototype.list_concatenate = function (list1, list2) {
-
-
-    throw new Error("Not Implemneted");
+    
+    var listFinal = list1.concat(list2);
+    return listFinal;
 }
 
-//Write a function that takes a number and returns a list of its digits. So for 2342 it should return [2,3,4,2].
+//DONE Write a function that takes a number and returns a list of its digits. So for 2342 it should return [2,3,4,2].
 
 homeWork.prototype.convert_number_to_list = function (number) {
 
-
-    throw new Error("Not Implemneted");
-
+    return Array.from(number.toString()).map(Number);
+  
 }
+
+
 
 
 /*
@@ -137,8 +124,8 @@ Write a JavaScript program where the program takes a random integer between 1 to
 
 homeWork.prototype.guess_number = function (user_number) {
     var num = Math.ceil(Math.random() * 10);
-    throw new Error("Not Implemneted");
-
+    
+ 
 }
 
 /*
@@ -182,7 +169,7 @@ homeWork.prototype.add_last_three_char_to = function (givernStr) {
 homeWork.prototype.check_number_in_range = function (number1, number2, number3) {
 
 
-    throw new Error("Not Implemneted");
+    
 
 }
 
