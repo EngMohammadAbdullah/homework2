@@ -49,11 +49,6 @@ homeWork.prototype.reverse_list = function (list) {
 
 homeWork.prototype.Is_Exist = function (element, list) {
     
-    var n = list.includes(element);
-    if (n) {
-       return element+" exist in the list ["+list+"]";
-    } else
-     return element+" doesn't exist in the list ["+list+"]";
 }
 
 //Write a function that returns the elements on odd positions in a list.
@@ -144,8 +139,6 @@ homeWork.prototype.difference = function (user_number) {
  */
 
 homeWork.prototype.add_char_to = function (givenString) {
-
-
     throw new Error("Not Implemneted");
 
 }
@@ -155,8 +148,6 @@ homeWork.prototype.add_char_to = function (givenString) {
  */
 
 homeWork.prototype.add_last_three_char_to = function (givernStr) {
-
-
     throw new Error("Not Implemneted");
 
 }
