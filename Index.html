@@ -36,14 +36,6 @@
                     alert(result);
                 });
 
-                $("#add_1_to").click(function () {
-                    var n = prompt("Add number to be added");
-                    n = Number.parseInt(n);
-                    var result = homework.add_1_to(n)
-                    console.log(result);
-                    alert(result);
-                });
-
 
                 $("#choose_operation").click(function () {
                     var n = prompt("Add number to be added");
@@ -70,7 +62,7 @@
                         prompt("Add numbers  to reverse list:" +
                             "ex : 4, 5, 9, 8, 7");
                     list = JSON.parse("[" + list + "]");
-                    var result = homework.get_max_number(list);
+                    var result = homework.reverse_list(list);
                     console.log(result);
                     alert(result);
                 });
