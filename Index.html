@@ -11,14 +11,19 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="index.js"></script>
+
     <script type="text/javascript">
         try {
+
 
             //Hello World
             $(document).ready(function () {
 
+                var homework = new homeWork();
+
                 $("#print_hello_world").click(function () {
-                    var str = print_hello_world();
+
+                    var str = homework.print_hello_world();
                     console.log(str);
                     alert(str);
                 })
@@ -26,7 +31,7 @@
                 $("#add_1_to").click(function () {
                     var n = prompt("Add number to be added");
                     n = Number.parseInt(n);
-                    var result = add_1_to(n)
+                    var result = homework.add_1_to(n)
                     console.log(result);
                     alert(result);
                 });
@@ -34,7 +39,7 @@
                 $("#add_1_to").click(function () {
                     var n = prompt("Add number to be added");
                     n = Number.parseInt(n);
-                    var result = add_1_to(n)
+                    var result = homework.add_1_to(n)
                     console.log(result);
                     alert(result);
                 });
@@ -45,7 +50,7 @@
                     n = Number.parseInt(n);
                     var operation =
                         prompt("Please Choose Operation");
-                    var result = choose_operation(n, operation)
+                    var result = homework.choose_operation(n, operation)
                     console.log(result);
                     alert(result);
                 });
@@ -55,7 +60,7 @@
                     var list =
                         prompt("Add numbers  to return max number ex: 4,5,9,8,7");
                     list = JSON.parse("[" + list + "]");
-                    var result = get_max_number(list);
+                    var result = homework.get_max_number(list);
                     console.log(result);
                     alert(result);
                 });
@@ -65,7 +70,7 @@
                         prompt("Add numbers  to reverse list:" +
                             "ex : 4, 5, 9, 8, 7");
                     list = JSON.parse("[" + list + "]");
-                    var result = get_max_number(list);
+                    var result = homework.reverse_list(list);
                     console.log(result);
                     alert(result);
                 });
@@ -78,7 +83,7 @@
 
                     var number = prompt("Please add number to search about");
                     number = Number.parseInt(n);
-                    var result = Is_Exist(number, list);
+                    var result = homework.Is_Exist(number, list);
                     console.log(result);
                     alert(result);
                 });
@@ -90,7 +95,7 @@
                             "Add numbers  to get odd position  elements:" +
                             "ex : 4, 5, 9, 8, 7");
                     list = JSON.parse("[" + list + "]");
-                    var result = get_odd_position_elements(list);
+                    var result = homework.get_odd_position_elements(list);
                     console.log(result);
                     alert(result);
                 });
@@ -107,7 +112,7 @@
                     list1 = JSON.parse("[" + list1 + "]");
                     list2 = JSON.parse("[" + list2 + "]");
 
-                    var result = list_concatenate(list1, list2);
+                    var result = homework.list_concatenate(list1, list2);
 
                     console.log(result);
                     alert(result);
@@ -118,7 +123,7 @@
                         prompt("Add number to convert it to a list" + "ex 4569 : [4,5,6,9]");
 
 
-                    var result = convert_number_to_list(number);
+                    var result = homework.convert_number_to_list(number);
 
                     console.log(result);
                     alert(result);
@@ -142,17 +147,17 @@
                             'ex 4569 : [4,5,6,9]["Hello", "World", "in", "a", "frame"]');
 
                     list = JSON.parse("[" + list + "]");
-                    var result = string_decorate(number);
+                    var result = homework.string_decorate(number);
                     console.log(result);
                     alert(result);
                 });
 
                 $("#guess_number").click(function () {
-                    var number =
-                        prompt("Add number");
+                    //var number =
+                       // prompt("Add number");
 
-                    number = Number.parseInt(number)
-                    var result = string_decorate(number);
+                    var number = Number.parseInt(number)
+                    var result = homework.guess_number(number);
                     console.log(result);
                     alert(result);
                 });
@@ -162,7 +167,7 @@
                         prompt("Add number");
 
                     number = Number.parseInt(number)
-                    var result = difference(number);
+                    var result = homework.difference(number);
                     console.log(result);
                     alert(result);
                 });
@@ -170,7 +175,7 @@
                 $("#add_char_to").click(function () {
                     var giverStr =
                         prompt("Add str");
-                    var result = add_char_to(giverStr);
+                    var result = homework.add_char_to(giverStr);
                     console.log(result);
                     alert(result);
                 });
@@ -178,7 +183,7 @@
                 $("#add_last_three_char_to").click(function () {
                     var giverStr =
                         prompt("Add str");
-                    var result = add_last_three_char_to(giverStr);
+                    var result = homework.add_last_three_char_to(giverStr);
                     console.log(result);
                     alert(result);
                 });
@@ -198,7 +203,7 @@
 
                     number3 = Number.parseInt(number3)
 
-                    var result = check_number_in_range(number1, number2, number3);
+                    var result = homework.check_number_in_range(number1, number2, number3);
                     console.log(result);
                     alert(result);
                 });
@@ -218,7 +223,7 @@
 
                     number3 = Number.parseInt(number3)
 
-                    var result = Is_last_digit_positive(number1, number2, number3);
+                    var result = homework.Is_last_digit_positive(number1, number2, number3);
                     console.log(result);
                     alert(result);
                 });
